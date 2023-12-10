@@ -21,6 +21,12 @@ const (
 	Blue  = 3
 )
 
+type Shirt struct {
+	Price float32
+	SKU   string
+	Color ShirtColor
+}
+
 var whitePrototype *Shirt = &Shirt{
 	Price: 15.00,
 	SKU:   "empty",
@@ -73,12 +79,6 @@ type ShirtColor byte
 
 func (i *Shirt) GetPrice() float32 {
 	return i.Price
-}
-
-type Shirt struct {
-	Price float32
-	SKU   string
-	Color ShirtColor
 }
 
 func (s *Shirt) GetInfo() string {
